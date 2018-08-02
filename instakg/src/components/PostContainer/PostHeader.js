@@ -1,14 +1,14 @@
-import React from 'react';
+import React from "react";
+import UserName from "./UserName";
+import UserIcon from "./UserIcon";
 
-let PostHeader = (props)=>{
-   
-        return (
-            <div className="row header">
-                 <div className='userIcon'> <img alt='usericon' className="userIcon" src={props.thumbnail}></img> </div>     
-        <div className='userName'> {props.userdisplay}</div>
-            </div>
-        );
-    
-}
+let PostHeader = props => {
+  return (
+    <div className="header">
+      <UserIcon imgS={props.thumbnail} />
+      <UserName> {props.userdisplay}</UserName>
+    </div>
+  );
+};
 
 export default PostHeader;
